@@ -1,21 +1,31 @@
 # Container Engine for Kubernetes (OKE) : Overview
 
-- Oracle Cloud Infrastructure Container Engine for Kubernetes (OKE) is a fully managed, scalable, and highly available service for deploying containerized applications to the Cloud.
+- **What is OKE?**
+  - Oracle Cloud Infrastructure Container Engine for Kubernetes (OKE) is a fully-managed, scalable, and highly available service for deploying containerized applications to the cloud.
   
-- OKE offers flexibility in choosing between virtual nodes or managed nodes for running applications, provisioning them efficiently within your OCI tenancy.
+- **Key Features:**
+  - OKE offers flexibility with virtual nodes or managed nodes for running applications, provisioning them within your OCI tenancy.
+  - Utilizes Kubernetes, simplifying deployment, scaling, and management of containerized applications.
+  - Uses Kubernetes versions certified as conformant by CNCF and is ISO-compliant for a secure platform.
+  
+- **Access and Management:**
+  - Access OKE via the Console, REST API, or Kubernetes tools like kubectl and Kubernetes Dashboard.
+  - Oracle manages master nodes, ensuring reliability with multiple copies distributed across availability domains.
+  
+- **Integration and Security:**
+  - Seamlessly integrates with various container lifecycle management products.
+  - Provides granular access control to production clusters, ensuring top-tier security.
+  
+- **Benefits:**
+  - Simplifies building and maintaining Kubernetes environments, reducing complexity and cost.
+  - Empowers developers with quick container deployment and provides DevOps teams with visibility and control.
+  - Blends Kubernetes orchestration with Oracle's cloud infrastructure for robust control and consistent performance.
 
-- Utilizes Kubernetes, an open-source system simplifying deployment, scaling, and management of containerized applications through pod grouping.
+- **Resource Limits:**
+  - Account type determines the number of clusters and maximum nodes per cluster.
+  - Compartment-specific limits can be set by administrators using compartment quotas.
 
-- OKE uses Kubernetes versions certified as conformant by CNCF and is ISO compliant (ISO-IEC standards 27001, 27017, and 27018) for a secure and reliable platform.
-
-- Cluster creation is simplified using the intuitive console and robust REST API, with management capabilities provided through kubectl, Kubernetes dashboard, and API.
-
-- Oracle manages master nodes (control plane nodes) including components like etcd, API server, and controller manager, distributed across different availability domains for reliability.
-
-- OKE seamlessly integrates with container lifecycle management products, including container registries, CI/CD frameworks, networking solutions, storage options, and security features.
-
-- Provides granular access control to production clusters, empowering developers with quick container deployment, and offering visibility and control for seamless Kubernetes management to DevOps teams.
-
-- Blends Kubernetes container orchestration with Oracle's advanced cloud infrastructure, ensuring robust control, top-tier security, IAM, and consistent performance.
-
-- OKE simplifies the building and maintenance of Kubernetes environments, making it less complex, costly, and time-consuming, resulting in efficient container deployment and management.
+- **Required IAM Service Policy:**
+  - Access to Oracle Cloud Infrastructure requires security access granted by an administrator via IAM policies.
+  
+This overview provides a comprehensive understanding of OKE's capabilities, management, integration, security, and resource limits, enabling users to leverage OKE effectively on Oracle Cloud Infrastructure.
