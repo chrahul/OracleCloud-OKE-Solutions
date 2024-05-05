@@ -1,4 +1,4 @@
-"Flannel CNI Plugin: Streamlined Pod Networking for Container Engine for Kubernetes (OKE) Clusters"
+
 
 1. **Introduction to Flannel CNI Plugin:**
    - Overview of how the flannel CNI plugin facilitates pod communication on worker nodes within OKE clusters.
