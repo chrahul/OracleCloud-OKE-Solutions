@@ -1,25 +1,26 @@
+Using the Flannel CNI Plugin for Pod Networking in OKE Clusters
 
-
-1. **Introduction to Flannel CNI Plugin:**
-   - Overview of how the flannel CNI plugin facilitates pod communication on worker nodes within OKE clusters.
-
-2. **Pod Networking with Flannel:**
-   - Description of how the flannel CNI plugin establishes pod networking without utilizing IP addresses from a VCN's CIDR block.
-   - Explanation of how communication between pods is encapsulated in the flannel overlay network, ensuring privacy and simplicity.
-   - Reference to the flannel documentation for further details.
-
+1. **Overview:**
+    - Flannel CNI plugin for pod communication on worker nodes in clusters created using Container Engine for Kubernetes (OKE).
+    
+2. **Flannel CNI Plugin:**
+    - Provides pod networking without using IP addresses from a VCN's CIDR block.
+    - Communication between pods is encapsulated in the flannel overlay network, a simple private overlay virtual network.
+    - Satisfies the requirements of the Kubernetes networking model by attaching IP addresses to containers.
+    - Pods in the private overlay network are only accessible from other pods in the same cluster.
+    
 3. **Flannel CIDR Block:**
-   - Details about the flannel CIDR block, which is utilized to provision IP addresses for pods and worker nodes.
-   - Mention of the ability to specify the same flannel CIDR block for multiple clusters, with options to increase its size as needed.
-   - Highlighting that the default flannel CIDR block can support a significant number of pods and worker nodes.
-
-4. **Compatibility and Use Cases:**
-   - Explanation of the compatibility of the flannel CNI plugin with managed node pools, contrasting with its incompatibility with virtual node pools.
-   - Recommendation to consider using the flannel CNI plugin in scenarios where the density of pods per node poses challenges for utilizing the OCI VCN-Native Pod Networking CNI.
-
-5. **Deployment and Defaults:**
-   - Overview of historical usage, mentioning that clusters created prior to July 2022 defaulted to using the flannel CNI plugin.
-   - Clarification that while the OCI VCN-Native Pod Networking CNI is now the default for Console-created clusters post-July 2022, the flannel CNI remains available for selection in 'Custom Create' workflows and through the API.
-
-6. **Conclusion:**
-   - Summary of the advantages and suitability of the flannel CNI plugin for certain use cases within OKE clusters.
+    - Uses its own CIDR block to provision pods and worker nodes with IP addresses.
+    - The default flannel CIDR block is large enough to support 65,534 pods and 512 worker nodes.
+    - Can be increased in size to support many more.
+    - The number of pods per worker node is not determined by the node shape.
+    
+4. **Compatibility and Usage:**
+    - Can be used with managed node pools but not with virtual node pools.
+    - Default CNI plugin for clusters created prior to July 2022 in OKE.
+    - Can be selected during cluster creation using the 'Custom Create' workflow.
+    - Still the default if using the API to create clusters.
+    
+5. **Additional Information:**
+    - [Flannel Documentation](link-to-flannel-docs)
+    - [OCI VCN-Native Pod Networking CNI Plugin Documentation](link-to-oci-docs)
