@@ -30,4 +30,4 @@
 - To check supported shapes, including options for virtual nodes, execute the command "oci ce node-pool-options get --node-pool-options-id all" and review the response.
 
 **Conclusion:**
-- This lesson covered the customization of worker nodes, explored image options, and outlined supported shapes for managed and virtual nodes in OKE. Choosing the right combination of image and shape is crucial for optimal performance and resource allocation. Thank you for watching!
+- The customization of worker nodes, explored image options, and outlined supported shapes for managed and virtual nodes in OKE. Choosing the right combination of image and shape is crucial for optimal performance and resource allocation.
